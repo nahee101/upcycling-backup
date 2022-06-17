@@ -1,12 +1,10 @@
 .reviewPage {
-    position: relative;
-    text-align: center;
-}
-
-
-.header {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: white;
+    cursor: pointer;
+    list-style: none;
 }
 
 .button_write {

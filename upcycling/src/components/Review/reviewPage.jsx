@@ -2,6 +2,7 @@ import { useNavigate } from 'react-router-dom';
 import ReviewItem from './reviewItem';
 import styles from './CSS/reviewPage.module.css'
 import { useState } from 'react';
+import { useEffect } from 'react';
 
 
 //🍎전체 Review를 보여주는 페이지
@@ -9,10 +10,12 @@ import { useState } from 'react';
 const ReviewPage = ({reviews}) => {
 
     const navigator = useNavigate()
-    const [onReviews] = useState(Object.values(reviews))
+    const [onReviews,setOnReviews] = useState(Object.values(reviews))
 
 
-    // console.log(onReviews)
+    useEffect(()=> {
+        setOnReviews(Object.values(reviews))
+    },[reviews])
 
     return (
         <section className={styles.reviewPage}>

@@ -24,7 +24,7 @@ const ReviewDetail = ({deleteReview, reviews, createAndUpdateComment, clickLike,
         }else if (currentComments === undefined) {
             setComments([])
         }
-    },[reviews])
+    },[reviews, currentComments])
     
 
 //🍎Reivew수정하기
@@ -80,8 +80,6 @@ const ReviewDetail = ({deleteReview, reviews, createAndUpdateComment, clickLike,
 
         만약에 닉네임이 다르다면 
         */
-       
-
         review.likes = [...review.likes,nickname]
 
         setReviewState(review)
